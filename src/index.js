@@ -21,7 +21,10 @@ function onInput(event) {
                Notiflix.Notify.info('Too many matches found. Please enter a more specific name.');
             } else if (info.length >= 2 && info.length <= 10) {
                placeForCountryList.innerHTML = '';
-               placeForCountryList.insertAdjacentHTML('afterbegin', coutryListRender(info));
+               placeForCountryList.insertAdjacentHTML(
+                  'afterbegin',
+                  coutryListRender(info).join('')
+               );
             } else {
                placeForCountryList.innerHTML = '';
                placeForCountryCard.innerHTML = '';
